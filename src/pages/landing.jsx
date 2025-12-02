@@ -12,7 +12,7 @@
           <p className="eyebrow">Hola, soy</p>
           <h1 className="title">Adrian NQ</h1>
           <p className="lead">
-            Desarrollador frontend — construyo interfaces accesibles y rápidas
+            Desarrollador frontend — costruyo interfaces accesibles y rápidas
             con React.
           </p>
 

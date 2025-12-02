@@ -1,11 +1,11 @@
 // Navbar component
+import React from "react";
 export default function Navbar() {
   return (
     <nav aria-label="Navegación principal" className="navbar">
       <ul>
-        <li>logo</li>
         <li>
-          <a href="#home">Sobre Mi</a>
+          <a href="#home">Inicio</a>
         </li>
         <li>
           <a href="#projects">Proyectos</a>
