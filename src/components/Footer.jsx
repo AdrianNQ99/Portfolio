@@ -146,27 +146,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        <div
-          style={{
-            borderTop: "1px solid var(--border)",
-            paddingTop: "2rem",
-            textAlign: "center",
-          }}
-        >
-          <p style={{ margin: "0.5rem 0", color: "var(--text-muted)" }}>
-            © {currentYear} Adrian NQ. Todos los derechos reservados.
-          </p>
-          <p
-            style={{
-              margin: "0.5rem 0",
-              fontSize: "0.9rem",
-              color: "var(--text-muted)",
-            }}
-          >
-            Diseñado y desarrollado con ❤️ usando React y Tailwind CSS
-          </p>
-        </div>
       </div>
     </footer>
   );

@@ -14,12 +14,15 @@ export default function Home() {
       >
         <div className="container">
           <p className="eyebrow">Bienvenido a mi portafolio</p>
-          <h1 className="title">Adrian NQ</h1>
+          <h1 className="title">Adrian Neuville</h1>
           <p className="lead">
-            Desarrollador Frontend especializado en React. Creo interfaces{" "}
-            <strong>accesibles</strong>, <strong>rápidas</strong> y{" "}
-            <strong>modernas</strong> que transforman ideas en experiencias
-            digitales excepcionales.
+            Desarrollador Full-Stack en crecimiento, con base sólida en Python,
+            Flask, SQLAlchemy y PostgreSQL, capaz de diseñar APIs REST fiables,
+            modelar bases de datos limpias y conectar servicios frontend-backend
+            con lógica bien estructurada. Experiencia práctica construyendo
+            plataformas reales (viajes y restauración), integrando autenticación
+            JWT, servicios externos (Cloudinary, Google Maps) y gestionando
+            despliegues con Git/GitHub.
           </p>
 
           <div className="actions">
@@ -49,15 +52,6 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Twitter
                 </a>
               </li>
             </ul>
