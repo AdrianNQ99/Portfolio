@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import routesConfig from "../routes/routesConfig";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,15 +7,11 @@ export default function Navbar() {
   return (
     <nav aria-label="Navegación principal" className="navbar">
       <ul>
-        <li>
-          <a href="#home">Inicio</a>
-        </li>
-        <li>
-          <a href="#projects">Proyectos</a>
-        </li>
-        <li>
-          <a href="#contact">Contacto</a>
-        </li>
+        {routesConfig.map((route) => (
+          <li key={route.name}>
+            <a href={route.path}>{route.name}</a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

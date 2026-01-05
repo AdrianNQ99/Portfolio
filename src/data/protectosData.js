@@ -1,5 +1,5 @@
 // Lista de los proyectos
-export const projects = [
+const proyectosData = [
   {
     id: "restaurant-management",
     title: "Sistema de Gestión de Restaurante",
@@ -38,3 +38,4 @@ export const projects = [
     demo: "",
   },
 ];
+export default proyectosData;

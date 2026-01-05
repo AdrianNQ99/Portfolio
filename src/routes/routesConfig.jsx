@@ -1,5 +1,6 @@
-import Home from "../pages/Inicio.jsx";
 import Contacto from "../pages/contacto.jsx";
+import Home from "../pages/Inicio.jsx";
+import Proyectos from "../pages/proyectos.jsx";
 
 const routesConfig = [
   {
@@ -8,9 +9,14 @@ const routesConfig = [
     component: <Home />,
   },
   {
+    name: "Proyectos",
+    path: "/proyectos",
+    component: <Proyectos />,
+  },
+  {
     name: "Contacto",
     path: "/contacto",
-    component: <Contacto />,
+    component: <Contacto   />,
   },];
 
 export default routesConfig;

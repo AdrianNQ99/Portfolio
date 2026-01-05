@@ -1,5 +1,4 @@
 ﻿import { ProyectCard } from "../components/ProyectCard.jsx";
-import { projects } from "../data/projects.js";
 
 export default function Home() {
   return (
@@ -57,36 +56,6 @@ export default function Home() {
           </nav>
         </div>
       </header>
-
-      {/* Sección de Proyectos */}
-      <section id="projects" aria-label="Proyectos">
-        <div className="container">
-          <h2>Proyectos Destacados</h2>
-          <p
-            style={{
-              textAlign: "center",
-              color: "var(--text-secondary)",
-              marginBottom: "3rem",
-              fontSize: "1.05rem",
-            }}
-          >
-            Algunos de los proyectos en los que he trabajado recientemente
-          </p>
-          <div className="projects-grid">
-            {projects.map((project) => (
-              <ProyectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                tech={project.tech}
-                image={project.image}
-                github={project.github}
-                demo={project.demo}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Sección de About - Habilidades */}
       <section id="about" style={{ background: "rgba(30, 41, 59, 0.3)" }}>
