@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import routesConfig from "../routes/routesConfig";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav aria-label="Navegación principal" className="navbar">

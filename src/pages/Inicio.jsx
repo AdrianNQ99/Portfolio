@@ -1,6 +1,4 @@
-﻿import { ProyectCard } from "../components/ProyectCard.jsx";
-
-export default function Home() {
+﻿export default function Home() {
   return (
     <main>
       {/* Sección Hero */}
