@@ -31,9 +31,9 @@ const Hero = () => {
         </div>
       </div>
       <img
-        src="https://placehold.co/400x400"
+        src="./public/images/AN.png"
         alt="Foto de Adrian Neuville"
-        className="w-40 h-40 md:w-64 md:h-64 rounded-full object-cover"
+        className="w-50 h-50 md:w-75 md:h-75 rounded-full"
         loading="lazy"
       />
     </section>
