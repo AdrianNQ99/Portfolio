@@ -6,6 +6,7 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8">
       <Hero />
       <About />
+      {/*Añadir Cards con los proyectos*/}
     </main>
   );
 }

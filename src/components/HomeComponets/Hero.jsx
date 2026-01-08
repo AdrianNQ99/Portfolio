@@ -30,14 +30,14 @@ const Hero = () => {
           </a>
         </div>
           <a
-            href="/files/Adrian_Neuville_CV.pdf"
+            href="./public\AdrianNeuvilleResume.pdf"
             className="text-3xl hover:text-blue-400 transition-colors duration-300"
           >
             Descargar CV
           </a>
       </div>
       <img
-        src="./public/images/AN.png"
+        src="./images/AN.png"
         alt="Foto de Adrian Neuville"
         className="w-50 h-50 md:w-75 md:h-75 rounded-full"
         loading="lazy"
