@@ -9,7 +9,7 @@ export default function Navbar() {
       <li key={route.name}>
         <a
           href={route.path}
-          className=" flex items-center gap-2 hover:text-blue-600 transition-colors duration-300"
+          className=" flex items-center gap-1 hover:text-blue-600 transition-colors duration-300"
         >
           {route.icon} {route.name}
         </a>
