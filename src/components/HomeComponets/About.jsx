@@ -8,6 +8,7 @@ const logos = [
   { src: "/logos/logo-github.png", alt: "GitHub" },
   { src: "/logos/logo-jwt.png", alt: "JWT" },
   { src: "/logos/logo-mysql.png", alt: "MySQL" },
+  { src: "logos/python_logo.png", alt: "Python" },
 ];
 
 const About = () => {
