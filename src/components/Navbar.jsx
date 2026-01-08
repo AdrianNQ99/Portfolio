@@ -3,15 +3,15 @@ import routesConfig from "../routes/routesConfig";
 export default function Navbar() {
 
   return (
-   <nav aria-label="Navegación principal" className="text-white px-6 py-4">
-  <ul className="flex gap-6 items-center font-inter">
+   <nav aria-label="Navegación principal" className="max-w-7xl mx-auto rounded-full">
+  <ul className="flex gap-6 items-center">
     {routesConfig.map((route) => (
       <li key={route.name}>
         <a
           href={route.path}
-          className="hover:text-accent transition-colors"
+          className=" flex items-center gap-2 hover:text-blue-600 transition-colors duration-300"
         >
-          {route.name}
+          {route.icon} {route.name}
         </a>
       </li>
     ))}
