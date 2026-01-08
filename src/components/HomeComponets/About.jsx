@@ -15,7 +15,7 @@ const About = () => {
     <section className="about-section">
       <div className="mb-12">
         <h2 className="text-4xl font-bold mb-6">Sobre Mí</h2>
-        <p className="leading-relaxed max-w-3xl">
+        <p className="leading-relaxed text-xl max-w-3xl">
           Desarrollador Full-Stack en crecimiento, con base sólida en Python,
           Flask, SQLAlchemy y PostgreSQL, capaz de diseñar APIs REST fiables,
           modelar bases de datos limpias y conectar servicios frontend-backend
@@ -36,7 +36,7 @@ const About = () => {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="w-40 h-40 object-contain flex-shrink-0"
+                className="w-30 h-30 object-contain flex-shrink-0"
               />
             ))}
           </div>
@@ -48,7 +48,7 @@ const About = () => {
                 src={logo.src}
                 alt=""
                 loading="lazy"
-                className="w-40 h-40 object-contain flex-shrink-0"
+                className="w-30 h-30 object-contain flex-shrink-0"
               />
             ))}
           </div>
