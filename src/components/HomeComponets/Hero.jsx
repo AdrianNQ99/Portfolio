@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="hero-section flex flex-col md:flex-row items-center justify-between gap-10 py-20">
       <div className="max-w-2xl text-center md:text-left">
-        <h1 className="text-5xl font-bold mb-4">Bienvenido a Mi Portfolio</h1>
+        <h1 className="text-5xl font-bold mb-4">Bienvenido a mi Portfolio</h1>
         <p className="text-xl mb-6">
           Soy Adrian Neuville, un desarrollador apasionado por crear soluciones
           web innovadoras y eficientes. Explora mis proyectos y habilidades.
@@ -29,6 +29,12 @@ const Hero = () => {
             <FaLinkedin />
           </a>
         </div>
+          <a
+            href="/files/Adrian_Neuville_CV.pdf"
+            className="text-3xl hover:text-blue-400 transition-colors duration-300"
+          >
+            Descargar CV
+          </a>
       </div>
       <img
         src="./public/images/AN.png"
@@ -36,6 +42,7 @@ const Hero = () => {
         className="w-50 h-50 md:w-75 md:h-75 rounded-full"
         loading="lazy"
       />
+      
     </section>
   );
 };

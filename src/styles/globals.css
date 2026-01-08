@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+
+}
+
+:root {
+  --carousel-speed: 20s;
+  --carousel-gap: 4rem;
+  --carousel-padding: 3.75rem;
+  --logo-width: 10rem;
+  --gradient-width: 15%;
+  @media (max-width:768px){
+    --carousel-padding: 2rem;
+    --logo-width: 6rem;
+    --carousel-gap: 2rem;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -21,10 +39,50 @@ nav {
   padding: 2rem;
 }
 .about-section {
- 
   color: white;
   padding: 2rem;
   border-radius: 8px;
+}
+.carousel {
+  position: relative;
+  padding-block: var(--carousel-padding);
+  display: flex;
+  column-gap: var(--carousel-gap);
+  overflow-x: hidden;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+  min-height: auto;
+
+  .logos {
+    display: flex;
+    column-gap: var(--carousel-gap);
+    animation: scroll var(--carousel-speed) linear infinite;
+    will-change: transform;
+
+    img {
+      width: var(--logo-width);
+      object-fit: contain;
+      transition: scale 0.3s;
+      user-select: none;
+
+      &:hover {
+        scale: 1.10;
+      }
+    }
+  }
+
+  &:hover .logos {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--carousel-gap)));
+  }
 }
 footer {
   background-color: #111;
