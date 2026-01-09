@@ -1,8 +1,6 @@
 function ProjectCard({ title, description, image, tech }) {
   return (
     <article className="group relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl overflow-hidden transition hover:-translate-y-1 hover:shadow-2xl">
-      
-      {/* Image */}
       <div className="relative h-56 overflow-hidden">
         <img
           src={image}
@@ -12,7 +10,6 @@ function ProjectCard({ title, description, image, tech }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
 
-      {/* Content */}
       <div className="p-6 flex flex-col h-full">
         <h3 className="text-xl font-semibold mb-3">{title}</h3>
 
@@ -20,7 +17,6 @@ function ProjectCard({ title, description, image, tech }) {
           {description}
         </p>
 
-        {/* Tech */}
         <div className="mt-6 flex flex-wrap gap-2">
           {tech.map((item, i) => (
             <span
@@ -29,9 +25,11 @@ function ProjectCard({ title, description, image, tech }) {
             >
               {item}
             </span>
+
           ))}
         </div>
       </div>
+
     </article>
   );
 }

@@ -13,8 +13,8 @@ const proyectosData = [
       "Tailwind",
       "Docker",
     ],
-    image: "/images/proyecto1.png",
-    github: "URL_DEL_REPO",
+    image: "../public/images/ElPieCastillo.jpg",
+    github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo",
     demo: "URL_DEMO",
   },
   {
