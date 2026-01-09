@@ -7,7 +7,7 @@ const routesConfig = [
   {
     icon: <FaHome />,
     name: "Inicio",
-    path: "/",
+    path: "#home",
     component: <Home />,
   },
   {

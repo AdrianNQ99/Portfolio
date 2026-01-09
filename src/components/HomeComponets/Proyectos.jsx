@@ -1,30 +1,23 @@
+import proyectosData from "../../data/protectosData";
+import ProjectCard from "../GenericComponents/ProyectCard";
+
 const Proyectos = () => {
   return (
-    <main>
-      <section id="proyectos" className="proyectos-section flex flex-col ">
-        <h3 className="text-4xl font-bold mb-8 text-center">Proyectos</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Proyecto 1 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="/images/proyecto1.png"
-              alt="Proyecto 1"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">Proyecto 1</h3>
-              <p className="text-gray-600 mb-4">
-                Descripción breve del proyecto 1. Tecnologías usadas: React,
-                Node.js.
-              </p>
-              <a href="#" className="text-blue-500 hover:underline">
-                Ver más
-              </a>
-            </div>
-          </div>
+    <section id="proyectos" className="relative min-h-screen text-gray-200 flex items-center justify-center px-6 py-20 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto">
+        {/* Title */}
+        <h2 className="text-center text-4xl font-bold text-cyan-400 mb-16">
+          Proyectos
+        </h2>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          {proyectosData.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 export default Proyectos;

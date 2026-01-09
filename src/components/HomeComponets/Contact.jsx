@@ -7,7 +7,6 @@ export default function Contact() {
       className="relative min-h-screen text-gray-200 flex items-center justify-center px-6 py-20 overflow-hidden"
     >
       <div className="relative z-10 w-full max-w-6xl">
-        {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold mb-3">Contacto</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
@@ -15,10 +14,7 @@ export default function Contact() {
             escucharte!
           </p>
         </div>
-
-        {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Left Card */}
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Conéctate conmigo</h3>
 
@@ -32,7 +28,6 @@ export default function Contact() {
                   <p className="font-medium">aneuville99@gmail.com</p>
                 </div>
               </div>
-
               <div className="flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3">
                 <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5">
                   {<Github className="text-gray-300" />}
@@ -55,8 +50,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Right Card */}
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
 
