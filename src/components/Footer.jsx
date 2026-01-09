@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto py-4">
         <div className="footer-content">
           <p className="text-center text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Adrian Neuville 
+            &copy; {new Date().getFullYear()} Adrian Neuville
           </p>
         </div>
       </div>

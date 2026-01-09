@@ -29,12 +29,12 @@ const Hero = () => {
             <FaLinkedin />
           </a>
         </div>
-          <a
-            href="./public\AdrianNeuvilleResume.pdf"
-            className="text-3xl hover:text-blue-400 transition-colors duration-300"
-          >
-            Descargar CV
-          </a>
+        <a
+          href="./public\AdrianNeuvilleResume.pdf"
+          className="text-3xl hover:text-blue-400 transition-colors duration-300"
+        >
+          Descargar CV
+        </a>
       </div>
       <img
         src="./images/AN.png"
@@ -42,7 +42,6 @@ const Hero = () => {
         className="w-50 h-50 md:w-75 md:h-75 rounded-full"
         loading="lazy"
       />
-      
     </section>
   );
 };

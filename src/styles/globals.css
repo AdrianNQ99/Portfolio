@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-
 }
 
 :root {
@@ -11,7 +10,7 @@
   --carousel-padding: 3.75rem;
   --logo-width: 10rem;
   --gradient-width: 15%;
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     --carousel-padding: 2rem;
     --logo-width: 6rem;
     --carousel-gap: 2rem;
@@ -65,7 +64,7 @@ nav {
       user-select: none;
 
       &:hover {
-        scale: 1.10;
+        scale: 1.1;
       }
     }
   }
@@ -84,6 +83,16 @@ nav {
     transform: translateX(calc(-100% - var(--carousel-gap)));
   }
 }
+
+.proyectos-section {
+  color: white;
+  padding: 2rem;
+}
+.contact-section {
+  color: white;
+  padding: 2rem;
+}
+
 footer {
   background-color: #111;
   color: white;
