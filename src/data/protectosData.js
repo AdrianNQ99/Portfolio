@@ -4,7 +4,7 @@ const proyectosData = [
     id: "restaurant-management",
     title: "Sistema de Gestión de Restaurante",
     description:
-      "App completa con FastAPI y Next.js: pedidos, mesas, productos, reportes y autenticación JWT.",
+      "App completa con RestAPI y Next.js: pedidos, mesas, productos, reportes y autenticación JWT.",
     tech: [
       "FastAPI",
       "PostgreSQL",
@@ -14,28 +14,9 @@ const proyectosData = [
       "Docker",
     ],
     image: "../public/images/ElPieCastillo.jpg",
-    github: ".public/images/ElPieCastillo.jpg",
+    github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo/",
     demo: "URL_DEMO",
   },
-  {
-    id: "auth-microservice",
-    title: "Servicio de Autenticación",
-    description:
-      "Microservicio de autenticación JWT con FastAPI, tests Pytest, logs y manejo de errores.",
-    tech: ["FastAPI", "JWT", "Pytest", "Docker"],
-    image: "https://placehold.co/600x400",
-    github: "URL_DEL_REPO",
-    demo: "",
-  },
-  {
-    id: "utils-library",
-    title: "Librería de utilidades",
-    description:
-      "Pequeña librería de validación y conversión en Python. Proyecto limpio, testeado y documentado.",
-    tech: ["Python", "Pytest"],
-    image: "https://placehold.co/600x400",
-    github: "URL_DEL_REPO",
-    demo: "",
-  },
+  
 ];
 export default proyectosData;
