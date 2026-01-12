@@ -1,21 +1,22 @@
-function ProjectCard({ title, description, image, tech }) {
+function ProjectCard({ title, description, image, tech, github, demo }) {
   return (
-    <article className="group relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transition hover:-translate-y-1">
+    <article className="group relative flex flex-col rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
       <div className="relative h-56 overflow-hidden rounded-t-3xl">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </div>
-      <div className="p-6 flex flex-col">
+
+      <div className="flex flex-col flex-1 p-6">
         <h3 className="text-xl font-semibold mb-3">{title}</h3>
 
-        <p className="text-sm text-gray-400 leading-relaxed mb-4">
+        <p className="text-sm text-gray-400 leading-relaxed mb-6">
           {description}
         </p>
-        <div className="mt-auto flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-6">
           {tech.map((item, i) => (
             <span
               key={i}
@@ -25,8 +26,27 @@ function ProjectCard({ title, description, image, tech }) {
             </span>
           ))}
         </div>
+
+        <div className="mt-auto flex gap-3">
+          <button
+            onClick={() => window.open(github, "_blank")}
+            className="flex-1 rounded-lg bg-cyan-500/90 px-4 py-2 text-sm font-medium text-black hover:bg-cyan-400 transition"
+          >
+            Ver código
+          </button>
+
+          <button
+            onClick={() => {
+              window.open(demo, "_blank");
+            }}
+            className="flex-1 rounded-lg bg-white/10 px-4 py-2 text-sm text-gray-200 hover:bg-white/20 transition"
+          >
+            Ver demo
+          </button>
+        </div>
       </div>
     </article>
   );
 }
+
 export default ProjectCard;
