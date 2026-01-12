@@ -14,7 +14,7 @@ const proyectosData = [
       "Docker",
     ],
     image: "../public/images/ElPieCastillo.jpg",
-    github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo",
+    github: ".public/images/ElPieCastillo.jpg",
     demo: "URL_DEMO",
   },
   {
@@ -23,7 +23,7 @@ const proyectosData = [
     description:
       "Microservicio de autenticación JWT con FastAPI, tests Pytest, logs y manejo de errores.",
     tech: ["FastAPI", "JWT", "Pytest", "Docker"],
-    image: "/images/proyecto2.png",
+    image: "https://placehold.co/600x400",
     github: "URL_DEL_REPO",
     demo: "",
   },
@@ -33,7 +33,7 @@ const proyectosData = [
     description:
       "Pequeña librería de validación y conversión en Python. Proyecto limpio, testeado y documentado.",
     tech: ["Python", "Pytest"],
-    image: "/images/proyecto3.png",
+    image: "https://placehold.co/600x400",
     github: "URL_DEL_REPO",
     demo: "",
   },
