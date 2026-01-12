@@ -1,7 +1,5 @@
 import routesConfig from "../../routes/routesConfig";
 
-/*impementar animacion fluida de movimiento al hacer click en los enlaces del navbar*/
-
 export default function Navbar() {
   return (
     <nav

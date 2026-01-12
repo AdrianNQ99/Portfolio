@@ -6,7 +6,7 @@ const Proyectos = () => {
     <section id="proyectos" className="relative min-h-screen text-gray-200 flex items-center justify-center px-6 py-20 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-center text-4xl font-bold text-cyan-400 mb-16">
+        <h2 className="text-center text-4xl font-bold mb-16">
           Proyectos
         </h2>
 

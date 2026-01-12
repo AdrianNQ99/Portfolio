@@ -1,12 +1,39 @@
-import { Mail, Github, Send, Linkedin } from "lucide-react";
+import React from "react";
+
+import {
+  Mail,
+  Github,
+  Send,
+  Linkedin,
+  Copy,
+  SquareArrowOutUpRight,
+  Check,
+} from "lucide-react";
+
+const inputStyles =
+  "mt-1 w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500";
+
+const contactItemStyles =
+  "flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3";
+
+const iconBoxStyles =
+  "w-10 h-10 flex items-center justify-center rounded-lg bg-white/5";
 
 export default function Contact() {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("aneuville99@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
+
   return (
     <section
       id="contact"
-      className="relative min-h-screen text-gray-200 flex items-center justify-center px-6 py-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-6 py-20 text-gray-200"
     >
-      <div className="relative z-10 w-full max-w-6xl">
+      <div className="w-full max-w-6xl">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold mb-3">Contacto</h2>
           <p className="text-gray-400 max-w-xl mx-auto">
@@ -14,56 +41,120 @@ export default function Contact() {
             escucharte!
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Conéctate conmigo</h3>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5">
-                  {<Mail className="text-gray-300" />}
+              <div className={contactItemStyles}>
+                <div className={iconBoxStyles}>
+                  <Mail className="text-gray-300" />
                 </div>
-                <div>
+
+                <div className="flex-1">
                   <p className="text-sm text-gray-400">Email</p>
                   <p className="font-medium">aneuville99@gmail.com</p>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className="text-gray-400 hover:text-gray-200 transition"
+                >
+                  {copied ? (
+                    <Check
+                      size={18}
+                      className="text-blue-400 animate-pulse"
+                    />
+                  ) : (
+                    <Copy size={18} />
+                  )}
+                </button>
               </div>
-              <div className="flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5">
-                  {<Github className="text-gray-300" />}
+
+              <div className={contactItemStyles}>
+                <div className={iconBoxStyles}>
+                  <Github className="text-gray-300" />
                 </div>
-                <div>
+
+                <div className="flex-1">
                   <p className="text-sm text-gray-400">GitHub</p>
                   <p className="font-medium">@AdrianNQ99</p>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    window.open("https://github.com/AdrianNQ99", "_blank")
+                  }
+                  className="text-gray-400 hover:text-gray-200 transition"
+                >
+                  <SquareArrowOutUpRight size={18} />
+                </button>
               </div>
-              <div className="flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5">
-                  {<Linkedin className="text-gray-300" />}
+
+              <div className={contactItemStyles}>
+                <div className={iconBoxStyles}>
+                  <Linkedin className="text-gray-300" />
                 </div>
-                <div>
-                  <p className="text-sm text-gray-400">Linkedin</p>
-                  <p className="font-medium">
-                    https://www.linkedin.com/in/adrianneuville/
-                  </p>
+
+                <div className="flex-1">
+                  <p className="text-sm text-gray-400">LinkedIn</p>
+                  <p className="font-medium">linkedin.com/in/adrianneuville</p>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/adrianneuville/",
+                      "_blank"
+                    )
+                  }
+                  className="text-gray-400 hover:text-gray-200 transition"
+                >
+                  <SquareArrowOutUpRight size={18} />
+                </button>
               </div>
             </div>
           </div>
+
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
 
             <form className="space-y-4">
-              <Input label="Nombre *" placeholder="Tu nombre completo" />
-              <Input label="Email *" placeholder="tu@email.com" type="email" />
-              <Input label="Asunto" placeholder="¿De qué quieres hablar?" />
+              <div>
+                <label className="text-sm text-gray-400">Nombre *</label>
+                <input
+                  className={inputStyles}
+                  placeholder="Tu nombre completo"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm text-gray-400">Email *</label>
+                <input
+                  type="email"
+                  className={inputStyles}
+                  placeholder="tu@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm text-gray-400">Asunto</label>
+                <input
+                  className={inputStyles}
+                  placeholder="¿De qué quieres hablar?"
+                />
+              </div>
 
               <div>
                 <label className="text-sm text-gray-400">Mensaje *</label>
                 <textarea
                   rows={5}
+                  className={inputStyles}
                   placeholder="Cuéntame sobre tu proyecto o idea..."
-                  className="mt-1 w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
                 />
               </div>
 
@@ -83,17 +174,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Input({ label, ...props }) {
-  return (
-    <div>
-      <label className="text-sm text-gray-400">{label}</label>
-      <input
-        {...props}
-        className="mt-1 w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
-      />
-    </div>
   );
 }
