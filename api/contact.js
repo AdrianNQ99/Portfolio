@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         <p>${message}</p>
       `,
     });
-
+    console.log("Resend API response:", result);
     return res.status(200).json({ ok: true });
   } catch (error) {
     console.error(error);
