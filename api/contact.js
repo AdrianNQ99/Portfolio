@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   const { name, email, subject, message } = req.body;
 
   try {
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "Portfolio <anything>@autenenelu.resend.app",
       to: ["aneuville99@gmail.com"],
       reply_to: email,
@@ -24,9 +24,14 @@ export default async function handler(req, res) {
       `,
     });
     
-    return console.log("Resend API response:", result);;
+    console.log("Resend API response:", result);
+    return res.status(200).json({ ok: true });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: "Error sending email" });
+    console.error("Resend API error:", error);
+    return res.status(500).json({ 
+      error: "Error sending email", 
+      details: error.message,
+      statusCode: error.statusCode 
+    });
   }
 }
