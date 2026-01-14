@@ -23,8 +23,8 @@ export default async function handler(req, res) {
         <p>${message}</p>
       `,
     });
-    console.log("Resend API response:", result);
-    return res.status(200).json({ ok: true });
+    
+    return console.log("Resend API response:", result);;
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Error sending email" });
