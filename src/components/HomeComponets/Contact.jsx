@@ -44,7 +44,7 @@ export default function Contact() {
   setStatus(null);
 
   try {
-    const response = await fetch("/api/contactRoute", {
+    const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
