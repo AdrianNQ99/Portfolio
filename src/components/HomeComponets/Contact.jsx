@@ -21,11 +21,48 @@ const iconBoxStyles =
 
 export default function Contact() {
   const [copied, setCopied] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = React.useState(false);
+  const [status, setStatus] = React.useState(null);
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("aneuville99@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
+  };
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mnqldjvd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      await response.json();
+      setStatus("SUCCESS");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus("ERROR");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,10 +100,7 @@ export default function Contact() {
                   className="text-gray-400 hover:text-gray-200 transition"
                 >
                   {copied ? (
-                    <Check
-                      size={18}
-                      className="text-blue-400 animate-pulse"
-                    />
+                    <Check size={18} className="text-blue-400 animate-pulse" />
                   ) : (
                     <Copy size={18} />
                   )}
@@ -123,10 +157,12 @@ export default function Contact() {
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handelSubmit} onChange={handleChange}>
               <div>
                 <label className="text-sm text-gray-400">Nombre *</label>
                 <input
+                  name="name"
+                  value={formData.name}
                   className={inputStyles}
                   placeholder="Tu nombre completo"
                 />
@@ -135,7 +171,9 @@ export default function Contact() {
               <div>
                 <label className="text-sm text-gray-400">Email *</label>
                 <input
+                  name="email"
                   type="email"
+                  value={formData.email}
                   className={inputStyles}
                   placeholder="tu@email.com"
                 />
@@ -144,6 +182,8 @@ export default function Contact() {
               <div>
                 <label className="text-sm text-gray-400">Asunto</label>
                 <input
+                  name="subject"
+                  value={formData.subject}
                   className={inputStyles}
                   placeholder="¿De qué quieres hablar?"
                 />
@@ -152,6 +192,8 @@ export default function Contact() {
               <div>
                 <label className="text-sm text-gray-400">Mensaje *</label>
                 <textarea
+                  name="message"
+                  value={formData.message}
                   rows={5}
                   className={inputStyles}
                   placeholder="Cuéntame sobre tu proyecto o idea..."
@@ -161,10 +203,22 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 px-6 py-3 font-medium text-black hover:opacity-90 transition"
+                disabled={loading}
               >
                 <Send size={18} />
-                Enviar mensaje
+                {loading ? "Enviando..." : "Enviar mensaje"}
               </button>
+
+              {status === "SUCCESS" && (
+                <p className="text-green-400 text-center mt-2">
+                  ¡Mensaje enviado con éxito!
+                </p>
+              )}
+              {status === "ERROR" && (
+                <p className="text-red-400 text-center mt-2">
+                  Error al enviar el mensaje. Por favor, inténtalo de nuevo.
+                </p>
+              )}
 
               <p className="text-xs text-gray-500 text-center">
                 Al enviar este formulario, aceptas que me comunique contigo.
