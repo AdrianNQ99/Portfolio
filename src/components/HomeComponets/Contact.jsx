@@ -38,32 +38,36 @@ export default function Contact() {
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   };
-  const handelSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  setStatus(null);
 
-    try {
-      const response = await fetch("https://formspree.io/f/mnqldjvd", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      await response.json();
-      setStatus("SUCCESS");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      setStatus("ERROR");
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    const response = await fetch("/api/contactRoute", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) throw new Error();
+
+    setStatus("SUCCESS");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  } catch {
+    setStatus("ERROR");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <section
@@ -157,12 +161,13 @@ export default function Contact() {
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
             <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
 
-            <form className="space-y-4" onSubmit={handelSubmit} onChange={handleChange}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label className="text-sm text-gray-400">Nombre *</label>
                 <input
                   name="name"
                   value={formData.name}
+                  onChange={handleChange}
                   className={inputStyles}
                   placeholder="Tu nombre completo"
                 />
@@ -175,6 +180,7 @@ export default function Contact() {
                   type="email"
                   value={formData.email}
                   className={inputStyles}
+                  onChange={handleChange}
                   placeholder="tu@email.com"
                 />
               </div>
@@ -184,6 +190,7 @@ export default function Contact() {
                 <input
                   name="subject"
                   value={formData.subject}
+                  onChange={handleChange}
                   className={inputStyles}
                   placeholder="¿De qué quieres hablar?"
                 />
@@ -194,6 +201,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   value={formData.message}
+                  onChange={handleChange}
                   rows={5}
                   className={inputStyles}
                   placeholder="Cuéntame sobre tu proyecto o idea..."

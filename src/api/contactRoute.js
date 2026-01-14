@@ -2,15 +2,19 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req) {
-  try {
-    const { name, email, subject, message } = await req.json();
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
+  const { name, email, subject, message } = req.body;
+
+  try {
     await resend.emails.send({
-      from: "Contacto <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL,
+      from: "Portfolio <onboarding@resend.dev>",
+      to: ["aneuville99@gmail.com"],
+      reply_to: email,
       subject: subject || "Nuevo mensaje desde el portfolio",
-      replyTo: email,
       html: `
         <h2>Nuevo mensaje</h2>
         <p><strong>Nombre:</strong> ${name}</p>
@@ -20,14 +24,9 @@ export async function POST(req) {
       `,
     });
 
-    return new Response(
-      JSON.stringify({ success: true }),
-      { status: 200 }
-    );
+    return res.status(200).json({ ok: true });
   } catch (error) {
-    return new Response(
-      JSON.stringify({ error: "Error al enviar el email" }),
-      { status: 500 }
-    );
+    console.error(error);
+    return res.status(500).json({ error: "Error sending email" });
   }
 }
