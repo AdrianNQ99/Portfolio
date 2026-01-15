@@ -13,10 +13,10 @@ const logos = [
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section px-4 md:px-8">
       <div className="mb-12">
-        <h2 className="text-4xl font-bold mb-6">Sobre Mí</h2>
-        <p className="leading-relaxed text-xl max-w-3xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Sobre Mí</h2>
+        <p className="leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mx-auto md:mx-0 text-gray-300">
           Desarrollador Full-Stack en crecimiento, con base sólida en Python,
           Flask, SQLAlchemy y PostgreSQL, capaz de diseñar APIs REST fiables,
           modelar bases de datos limpias y conectar servicios frontend-backend
@@ -27,8 +27,8 @@ const About = () => {
         </p>
       </div>
 
-      <div className="mt-16">
-        <h3 className="text-4xl font-bold mb-8 text-center">Skills</h3>
+      <div className="mt-12 md:mt-16">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Skills</h3>
         <div className="carousel">
           <div className="logos">
             {logos.map((logo) => (
@@ -37,7 +37,7 @@ const About = () => {
                 src={logo.src}
                 alt={logo.alt}
                 loading="lazy"
-                className="w-30 h-30 object-contain flex-shrink-0"
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30 object-contain flex-shrink-0"
               />
             ))}
           </div>
@@ -49,7 +49,7 @@ const About = () => {
                 src={logo.src}
                 alt=""
                 loading="lazy"
-                className="w-30 h-30 object-contain flex-shrink-0"
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30 object-contain flex-shrink-0"
               />
             ))}
           </div>

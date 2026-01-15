@@ -72,20 +72,20 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex items-center justify-center px-6 py-20 text-gray-200"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-12 md:pb-20 text-gray-200 scroll-mt-24"
     >
       <div className="w-full max-w-6xl">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-3">Contacto</h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">Contacto</h2>
+          <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto px-4">
             ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría
             escucharte!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
-            <h3 className="text-xl font-semibold mb-6">Conéctate conmigo</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-xl">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Conéctate conmigo</h3>
 
             <div className="space-y-4">
               <div className={contactItemStyles}>
@@ -158,8 +158,8 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-xl">
-            <h3 className="text-xl font-semibold mb-6">Envíame un mensaje</h3>
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-xl">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Envíame un mensaje</h3>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
