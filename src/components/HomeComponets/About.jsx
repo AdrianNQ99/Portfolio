@@ -17,13 +17,12 @@ const About = () => {
       <div className="mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Sobre Mí</h2>
         <p className="leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mx-auto md:mx-0 text-gray-300">
-          Desarrollador Full-Stack en crecimiento, con base sólida en Python,
-          Flask, SQLAlchemy y PostgreSQL, capaz de diseñar APIs REST fiables,
-          modelar bases de datos limpias y conectar servicios frontend-backend
-          con lógica bien estructurada. Experiencia práctica construyendo
-          plataformas reales (viajes y restauración), integrando autenticación
-          JWT, servicios externos (Cloudinary, Google Maps) y gestionando
-          despliegues con Git/GitHub.
+          Soy un desarrollador Full-Stack que está siempre aprendiendo algo nuevo. 
+          Me siento cómodo trabajando tanto en el backend con Python, Flask y PostgreSQL, 
+          como en el frontend con React. He trabajado en proyectos reales donde he 
+          integrado autenticación, APIs externas como Google Maps y Cloudinary, y he 
+          manejado todo el flujo desde el código hasta el despliegue. Me gusta resolver 
+          problemas y escribir código limpio que otros puedan entender.
         </p>
       </div>
 
