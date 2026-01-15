@@ -2,21 +2,13 @@
 const proyectosData = [
   {
     id: "restaurant-management",
-    title: "Sistema de Gestión de Restaurante",
+    title: "Web de contacto y reservas para restaurante",
     description:
-      "App completa con RestAPI y Next.js: pedidos, mesas, productos, reportes y autenticación JWT.",
-    tech: [
-      "FastAPI",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "Next.js",
-      "Tailwind",
-      "Docker",
-    ],
-    image: "../public/images/ElPieCastillo.jpg",
+      "App completa con RestAPI y react para la gestión de reservas y contacto de un restaurante.",
+    tech: ["React", "Node.js", "Express", "REST API", "CSS", "HTML"],
+    image: "/images/ElPieCastillo.jpg",
     github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo/",
-    demo: "URL_DEMO",
+    demo: "",
   },
-  
 ];
 export default proyectosData;
