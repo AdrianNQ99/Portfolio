@@ -35,14 +35,14 @@ function ProjectCard({ title, description, image, tech, github, demo }) {
             Ver código
           </button>
 
-          <button
-            onClick={() => {
-              window.open(demo, "_blank");
-            }}
-            className="flex-1 rounded-lg bg-white/10 px-4 py-2 text-xs sm:text-sm text-gray-200 hover:bg-white/20 transition"
-          >
-            Ver demo
-          </button>
+          {demo && (
+            <button
+              onClick={() => window.open(demo, "_blank")}
+              className="flex-1 rounded-lg bg-gray-400/90 px-4 py-2 text-xs sm:text-sm font-medium text-black hover:bg-gray-400 transition"
+            >
+              Ver demo
+            </button>
+          )}
         </div>
       </div>
     </article>
