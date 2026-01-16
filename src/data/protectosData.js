@@ -10,14 +10,24 @@ const proyectosData = [
     github: "https://github.com/AdrianNQ99/Portfolio",
     demo: "",
   },
-   {
+  {
     id: "seeya-travel",
     title: "SeeYa - Plataforma de búsqueda de viajes",
     description:
       "Aplicación web completa para búsqueda y reserva de vuelos, hoteles y coches de alquiler con sistema de autenticación.",
-    tech: ["React", "Vite", "Flask", "Python", "REST API", "Alembic","JWT","PostgreSQL"],
+    tech: [
+      "React",
+      "Vite",
+      "Flask",
+      "Python",
+      "REST API",
+      "Alembic",
+      "JWT",
+      "PostgreSQL",
+    ],
     image: "/images/Seeya.png",
-    github: "https://github.com/4GeeksAcademy/SeeYaTFB-Marcos-Eduardo-Joel-Adrian",
+    github:
+      "https://github.com/4GeeksAcademy/SeeYaTFB-Marcos-Eduardo-Joel-Adrian",
     demo: "",
   },
   {
