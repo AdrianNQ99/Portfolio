@@ -38,7 +38,7 @@ const proyectosData = [
     tech: ["React", "Node.js", "Express", "REST API", "CSS", "HTML"],
     image: "/images/ElPieCastillo.jpg",
     github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo/",
-    demo: "",
+    demo: "https://el-pie-castillo.vercel.app",
   },
 ];
 export default proyectosData;
