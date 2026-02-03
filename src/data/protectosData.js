@@ -34,11 +34,11 @@ const proyectosData = [
     id: "restaurant-management",
     title: "Web de contacto y reservas para restaurante",
     description:
-      "App completa con RestAPI y react para la gestión de reservas y contacto de un restaurante.",
-    tech: ["React", "Node.js", "Express", "REST API", "CSS", "HTML"],
+      "App completa con API REST Django y React para la gestión de reservas y contacto de un restaurante.",
+    tech: ["React", "Django", "Django REST Framework", "Tailwind CSS", "Vite"],
     image: "/images/ElPieCastillo.jpg",
-    github: "https://github.com/AdrianNQ99/Proyecto-El-Pie-Castillo/",
+    github: "https://github.com/AdrianNQ99/El-Pie-Castillo",
     demo: "https://el-pie-castillo.vercel.app",
-  },
+}
 ];
 export default proyectosData;
