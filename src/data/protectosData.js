@@ -1,6 +1,16 @@
 // Lista de los proyectos
 const proyectosData = [
   {
+    id: "restaurant-management",
+    title: "Web de contacto y reservas para restaurante",
+    description:
+      "App completa con API REST Django y React para la gestión de reservas y contacto de un restaurante.",
+    tech: ["React", "Django", "Django REST Framework", "Tailwind CSS", "Vite"],
+    image: "/images/ElPieCastillo.jpg",
+    github: "https://github.com/AdrianNQ99/El-Pie-Castillo",
+    demo: "https://el-pie-castillo.vercel.app",
+  },
+  {
     id: "portfolio",
     title: "Portfolio Personal",
     description:
@@ -30,15 +40,5 @@ const proyectosData = [
       "https://github.com/4GeeksAcademy/SeeYaTFB-Marcos-Eduardo-Joel-Adrian",
     demo: "",
   },
-  {
-    id: "restaurant-management",
-    title: "Web de contacto y reservas para restaurante",
-    description:
-      "App completa con API REST Django y React para la gestión de reservas y contacto de un restaurante.",
-    tech: ["React", "Django", "Django REST Framework", "Tailwind CSS", "Vite"],
-    image: "/images/ElPieCastillo.jpg",
-    github: "https://github.com/AdrianNQ99/El-Pie-Castillo",
-    demo: "https://el-pie-castillo.vercel.app",
-}
 ];
 export default proyectosData;
