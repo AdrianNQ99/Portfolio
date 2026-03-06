@@ -1,6 +1,25 @@
 // Lista de los proyectos
 const proyectosData = [
   {
+    id: "taskflow",
+    title: "TaskFlow - Gestor de tareas Kanban",
+    description:
+        "Aplicación web full-stack para gestión de proyectos y tareas con tablero Kanban, drag & drop nativo, edición en modal y modo demo funcional sin backend.",
+    tech: [
+        "React",
+        "Vite",
+        "Django",
+        "Python",
+        "REST API",
+        "JWT",
+        "SQLite",
+        "Tailwind CSS",
+    ],
+    image: "/images/TaskFlow.png",
+    github: "https://github.com/AdrianNQ/taskflow",
+    demo: "taskflow-pi-swart.vercel.app",
+},
+  {
     id: "restaurant-management",
     title: "Web de contacto y reservas para restaurante",
     description:
@@ -18,26 +37,6 @@ const proyectosData = [
     tech: ["React", "Vite", "TailwindCSS", "JavaScript", "HTML", "CSS"],
     image: "/images/Portfolio.png",
     github: "https://github.com/AdrianNQ99/Portfolio",
-    demo: "",
-  },
-  {
-    id: "seeya-travel",
-    title: "SeeYa - Plataforma de búsqueda de viajes",
-    description:
-      "Aplicación web completa para búsqueda y reserva de vuelos, hoteles y coches de alquiler con sistema de autenticación.",
-    tech: [
-      "React",
-      "Vite",
-      "Flask",
-      "Python",
-      "REST API",
-      "Alembic",
-      "JWT",
-      "PostgreSQL",
-    ],
-    image: "/images/Seeya.png",
-    github:
-      "https://github.com/4GeeksAcademy/SeeYaTFB-Marcos-Eduardo-Joel-Adrian",
     demo: "",
   },
 ];
