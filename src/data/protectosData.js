@@ -16,8 +16,8 @@ const proyectosData = [
         "Tailwind CSS",
     ],
     image: "/images/TaskFlow.png",
-    github: "https://github.com/AdrianNQ/taskflow",
-    demo: "taskflow-pi-swart.vercel.app",
+    github: "https://github.com/AdrianNQ99/taskflow",
+    demo: "https://taskflow-pi-swart.vercel.app",
 },
   {
     id: "restaurant-management",
