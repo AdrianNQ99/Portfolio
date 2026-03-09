@@ -138,7 +138,7 @@ export default function Contact() {
 
                 <div className="flex-1">
                   <p className="text-sm text-gray-400">LinkedIn</p>
-                  <p className="font-medium">linkedin.com/in/adrianneuville</p>
+                  <p className="font-medium">adrianneuville</p>
                 </div>
 
                 <button

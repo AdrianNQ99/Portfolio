@@ -13,8 +13,8 @@ const logos = [
 
 const About = () => {
   return (
-    <section className="about-section px-4 md:px-8">
-      <div className="mb-12">
+    <section className="about-section md:px-8">
+      <div className="mb-12 px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
           Sobre Mí
         </h2>
