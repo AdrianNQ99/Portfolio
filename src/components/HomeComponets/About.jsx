@@ -15,19 +15,34 @@ const About = () => {
   return (
     <section className="about-section px-4 md:px-8">
       <div className="mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Sobre Mí</h2>
-        <p className="leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mx-auto md:mx-0 text-gray-300">
-          Soy un desarrollador Full-Stack que está siempre aprendiendo algo nuevo. 
-          Me siento cómodo trabajando tanto en el backend con Python, Flask y PostgreSQL, 
-          como en el frontend con React. He trabajado en proyectos reales donde he 
-          integrado autenticación, APIs externas como Google Maps y Cloudinary, y he 
-          manejado todo el flujo desde el código hasta el despliegue. Me gusta resolver 
-          problemas y escribir código limpio que otros puedan entender.
-        </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          Sobre Mí
+        </h2>
+        <p className="leading-relaxed text-base sm:text-lg md:text-xl max-w-5xl mx-auto md:mx-0 text-gray-300">
+          Soy desarrollador Full-Stack especializado en Python, Django y React.
+          Me interesa especialmente el desarrollo de aplicaciones web completas,
+          donde puedo trabajar tanto en la lógica del backend como en la
+          experiencia del usuario en el frontend. He trabajado en proyectos que incluyen:</p>
+          <ul className="mt-4 max-w-3xl mx-auto md:mx-0 space-y-2 text-base sm:text-lg md:text-xl">
+            {[
+              "Desarrollo de APIs REST con Django REST Framework",
+              "Autenticación y autorización con JWT",
+              "Integración con servicios externos y APIs de terceros",
+              "Desarrollo de interfaces dinámicas y responsivas con React",
+              "Despliegue de aplicaciones web en plataformas como Heroku y Vercel",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-gray-300">
+                <span className="text-blue-400 mt-1 shrink-0">▹</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
       </div>
 
       <div className="mt-12 md:mt-16">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">Skills</h3>
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">
+          Skills
+        </h3>
         <div className="carousel">
           <div className="logos">
             {logos.map((logo) => (

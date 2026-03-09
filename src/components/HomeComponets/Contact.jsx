@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const inputStyles =
-  "mt-1 w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500";
+  "mt-1 w-full rounded-lg bg-black/40 border border-white/10 px-4 py-3 text-sm text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors";
 
 const contactItemStyles =
   "flex items-center gap-4 rounded-xl bg-black/40 border border-white/10 px-4 py-3";
@@ -78,8 +78,7 @@ export default function Contact() {
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">Contacto</h2>
           <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto px-4">
-            ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría
-            escucharte!
+            Si tienes un proyecto en mente o te gustaría colaborar, puedes escribirme.
           </p>
         </div>
 
@@ -106,7 +105,7 @@ export default function Contact() {
                   {copied ? (
                     <Check size={18} className="text-blue-400 animate-pulse" />
                   ) : (
-                    <Copy size={18} />
+                    <Copy size={18} className="text-gray-400" />
                   )}
                 </button>
               </div>
@@ -128,7 +127,7 @@ export default function Contact() {
                   }
                   className="text-gray-400 hover:text-gray-200 transition"
                 >
-                  <SquareArrowOutUpRight size={18} />
+                  <SquareArrowOutUpRight size={18} className="text-gray-400 hover:text-gray-200" />
                 </button>
               </div>
 
@@ -159,7 +158,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-4 sm:p-6 md:p-8 shadow-xl">
-            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Envíame un mensaje</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">O envíame un mensaje</h3>
 
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
@@ -210,7 +209,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 px-6 py-3 font-medium text-black hover:opacity-90 transition"
+                className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 px-6 py-3 font-medium text-black hover:opacity-90 transition"
                 disabled={loading}
               >
                 <Send size={18} />

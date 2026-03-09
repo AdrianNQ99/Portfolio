@@ -11,7 +11,7 @@ export default function Navbar() {
           <li key={route.name}>
             <a
               href={route.path}
-              className="flex items-center gap-1 text-sm text-gray-300 hover:text-sky-400 transition-colors"
+              className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-blue-400 transition-colors duration-300"
             >
               {route.icon}
               {route.name}

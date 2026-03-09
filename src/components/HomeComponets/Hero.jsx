@@ -2,15 +2,18 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="hero-section flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 py-12 md:py-20 px-4 md:px-8 mt-20 md:mt-24 lg:mt-20">
+    <section className="hero-section flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 py-12 md:py-20 px-4 md:px-8 mt-20 md:mt-24 lg:my-2">
       <div className="max-w-2xl text-center md:text-left w-full">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           Hola, soy Adrián
         </h1>
+        <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 text-blue-400">
+          Full-Stack Developer | Python · Django · React
+        </p>
         <p className="text-base sm:text-lg md:text-xl mb-6 text-gray-300">
-          Me encanta construir cosas para la web. Desde APIs hasta interfaces 
-          completas, disfruto cada parte del proceso de dar vida a las ideas. 
-          Echa un vistazo a lo que he estado haciendo.
+          Desarrollo aplicaciones web completas y APIs utilizando Python y
+          JavaScript. Trabajo tanto en backend como en frontend, construyendo
+          soluciones funcionales desde la idea inicial hasta el despliegue.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-6">
           <div className="flex gap-4">
@@ -34,9 +37,9 @@ const Hero = () => {
             </a>
           </div>
           <a
-            href="./public/AdrianNeuvilleResume.pdf"
+            href="./public/ADRIÁN_NEUVILLE_Resume.pdf"
             download
-            className="text-3xl hover:text-blue-400 transition-colors duration-300"
+            className="inline-flex items-center gap-2 rounded-lg border border-blue-400 px-4 py-2 text-sm font-medium text-blue-400 hover:bg-blue-400/10 transition-colors duration-300"
           >
             Descargar CV
           </a>

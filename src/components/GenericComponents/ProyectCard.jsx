@@ -1,4 +1,4 @@
-function ProjectCard({ title, description, image, tech, github, demo }) {
+function ProjectCard({ title, subtitle, description, image, tech, github, demo }) {
   return (
     <article className="group relative flex flex-col rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-xl transition hover:-translate-y-1 hover:shadow-2xl h-full">
       <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-3xl">
@@ -12,7 +12,11 @@ function ProjectCard({ title, description, image, tech, github, demo }) {
 
       <div className="flex flex-col flex-1 p-4 sm:p-6">
         <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{title}</h3>
-
+        {subtitle && (
+          <p className="text-xs sm:text-sm text-cyan-400/80 font-medium mb-3 sm:mb-4 leading-relaxed">
+            {subtitle}
+          </p>
+        )}
         <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-4 sm:mb-6">
           {description}
         </p>
@@ -38,7 +42,7 @@ function ProjectCard({ title, description, image, tech, github, demo }) {
           {demo && (
             <button
               onClick={() => window.open(demo, "_blank")}
-              className="flex-1 rounded-lg bg-gray-400/90 px-4 py-2 text-xs sm:text-sm font-medium text-black hover:bg-gray-400 transition"
+              className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm font-medium text-gray-300 hover:bg-white/10 transition"
             >
               Ver demo
             </button>

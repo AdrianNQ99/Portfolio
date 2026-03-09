@@ -5,11 +5,9 @@ import Proyectos from "../components/HomeComponets/Proyectos";
 
 export default function Home() {
   return (
-    <main id="home" className="container mx-auto">
-      <div className="min-h-screen flex flex-col justify-center">
-        <Hero />
-        <About />
-      </div>
+    <main id="home" className="container mx-auto space-y-16 md:space-y-24">
+      <Hero />
+      <About />
       <Proyectos />
       <Contact />
     </main>
